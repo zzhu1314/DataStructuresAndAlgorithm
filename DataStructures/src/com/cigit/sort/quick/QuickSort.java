@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @Date: 2020/8/10 15:41
  * 快速排序
  * 先选出一个中间值（pivot），将大于pivot的放在右边，将小于pivot的放在左边
+ * 然后再向左递归，在向右递归
  **/
 public class QuickSort {
     public static void main(String[] args) {
@@ -49,10 +50,10 @@ public class QuickSort {
             array[r] = temp;
         }
         //l==r,必须l++，r--否则会出现栈溢出
-         /*if(l==r){
+         if(l==r){
             l++;
             r--;
-        }*/
+        }
         //向左递归
         if(left<r){
             sort(array,left,r);
